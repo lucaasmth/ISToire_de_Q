@@ -7,13 +7,13 @@ const data = {
         across: {
           1: {
             clue: 'Groupe de virus',
-            answer: 'Papillomavirus' ,
+            answer: 'PAPILLOMAVIRUS' ,
             row: 10,
             col: 0,
           },
           2: {
             clue: 'Monter au 7ème ciel',
-            answer: 'Orgasme',
+            answer: 'ORGASME',
             row: 8,
             col: 2,
 
@@ -58,7 +58,7 @@ const data = {
           },
           9: {
             clue: 'Aussi appelé “chaude-pisse”',
-            answer: 'GONORHEE',
+            answer: 'GONORRHEE',
             row: 11,
             col: 14,
           },
@@ -113,6 +113,10 @@ export default function MyPage() {
         crosswordRef.current.reset();
     };
 
+    const answers = () => {
+        crosswordRef.current.fillAllAnswers();
+    }
+
   
     return (
         <div style={container}>
@@ -139,6 +143,7 @@ export default function MyPage() {
             </div>
             <button onClick={check}>Check</button>
             <button onClick={reset}>Reset</button>
+            <button onClick={answers}>Fill all answers</button>
         </div>
 
        
