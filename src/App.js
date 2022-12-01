@@ -1,9 +1,10 @@
+import BubbleShooter from "./components/BubbleShooter/BubbleShooter";
 
 
 function App() {
   return (
     <div className="App">
-      <p> Bubble</p>
+      <BubbleShooter></BubbleShooter>
     </div>
   );
 }
