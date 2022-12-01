@@ -7,9 +7,40 @@ const data = {
         across: {
           1: {
             clue: 'one plus one',
-            answer: 'TWO',
-            row: 0,
+            answer: 'Papillomavirus' ,
+            row: 10,
             col: 0,
+          },
+          2: {
+            clue: '',
+            answer: 'Orgasme',
+            row: 8,
+            col: 2,
+
+          },
+          3: {
+            clue:'',
+            answer: 'VIH',
+            row: 12,
+            col:7,
+          },
+          4: {
+            clue:'',
+            answer:'prevention',
+            row: 14,
+            col: 6,
+          },
+          5: {
+            clue:'',
+            answer:'preservatif',
+            row: 16,
+            col: 13,
+          },
+          6: {
+            clue:'',
+            answer: 'herpes',
+            row:18,
+            col: 13,
           },
         },
         down: {
