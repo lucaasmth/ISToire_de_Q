@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Crossword from '@jaredreisinger/react-crossword';
+import Crossword, { ThemeProvider } from '@jaredreisinger/react-crossword';
 
 const data = {
     
@@ -39,6 +39,8 @@ const Crosswords ={
     boxShadow: '0 0 5px 0 rgba(0,0,0,0.5)',
     padding: '10px',
     margin: '10px',
+    backgroundColor: 'blue',
+
 }
 
 export default function MyPage() {
@@ -61,21 +63,31 @@ export default function MyPage() {
     return (
         <div style={container}>
             <div style={Crosswords}>
-                <Crossword
-                    data={data}
-                    ref={crosswordRef}
-                />
+                <ThemeProvider
+                 theme={{
+                    columnBreakpoint: '9999px',
+                    gridBackground: 'none',
+                    cellBackground: '#ffe',
+                    cellBorder: '#fca',
+                    textColor: '#fff',
+                    numberColor: '#9f9',
+                    focusBackground: '#f00',
+                    highlightBackground: '#f99',
+                  }}>
+                    <Crossword
+                        data={data}
+                        ref={crosswordRef}
+                        showClues={true}
+                        showNumbers={true}
+                        showSolution={false}
+                    />
+                </ThemeProvider>
             </div>
-            <div style={{display: 'flex', gap: '10px'}}>
-                <button onClick={check}>Check</button>
-                <button onClick={reset}>Reset</button>
-            </div>
-
-            
+            <button onClick={check}>Check</button>
+            <button onClick={reset}>Reset</button>
         </div>
 
+       
         
-
-        
-    );   
+    );
 }
