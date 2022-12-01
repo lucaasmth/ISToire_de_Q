@@ -1,5 +1,6 @@
 import React from 'react';
-
+import BottomBar from '../NavigationBars/BottomBar';
+import './BubbleShooter.css'; 
 
 function loadShooter(Pcols, Prows){
     // The function gets called when the window is fully loaded
@@ -1008,7 +1009,7 @@ function loadShooter(Pcols, Prows){
         // On mouse button click
         function onMouseDown(e) {
             // Get the mouse position
-            var pos = getMousePos(canvas, e);
+            let pos = getMousePos(canvas, e);
             
             if (gamestate === gamestates.ready) {
                 shootBubble();
@@ -1034,10 +1035,13 @@ function loadShooter(Pcols, Prows){
 const BubbleShooter = () => {
   return (
     <div className="BubbleShooter">
-        <canvas id="viewport" width="628" height="550"></canvas>
+            
+        <canvas id="viewport" width={348} height={550}></canvas>
         {
             loadShooter(8, 14)
         }
+        
+        <BottomBar></BottomBar>
     </div>
   );
 }
