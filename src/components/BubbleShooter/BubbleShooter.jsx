@@ -1,29 +1,29 @@
 import React from 'react';
 
 
-function loadShooter(){
+function loadShooter(Pcols, Prows){
     // The function gets called when the window is fully loaded
     window.onload = function() {
         // Get the canvas and context
-        var canvas = document.getElementById("viewport");
-        var context = canvas.getContext("2d");
+        let canvas = document.getElementById("viewport");
+        let context = canvas.getContext("2d");
         
         // Timing and frames per second
-        var lastframe = 0;
-        var fpstime = 0;
-        var framecount = 0;
-        var fps = 0;
+        let lastframe = 0;
+        let fpstime = 0;
+        let framecount = 0;
+        let fps = 0;
         
-        var initialized = false;
+        let initialized = false;
         
         // Level
-        var level = {
+        let level = {
             x: 4,           // X position
-            y: 83,          // Y position
+            y: 4,          // Y position
             width: 0,       // Width, gets calculated
             height: 0,      // Height, gets calculated
-            columns: 15,    // Number of tile columns
-            rows: 14,       // Number of tile rows
+            columns: Pcols,    // Number of tile columns
+            rows: Prows,       // Number of tile rows
             tilewidth: 40,  // Visual width of a tile
             tileheight: 40, // Visual height of a tile
             rowheight: 34,  // Height of a row
@@ -185,19 +185,19 @@ function loadShooter(){
                 // Draw the frame
                 drawFrame();
                 
-                // Draw a progress bar
-                var loadpercentage = loadcount/loadtotal;
-                context.strokeStyle = "#ff8080";
-                context.lineWidth=3;
-                context.strokeRect(18.5, 0.5 + canvas.height - 51, canvas.width-37, 32);
-                context.fillStyle = "#ff8080";
-                context.fillRect(18.5, 0.5 + canvas.height - 51, loadpercentage*(canvas.width-37), 32);
+                // // Draw a progress bar
+                // var loadpercentage = loadcount/loadtotal;
+                // context.strokeStyle = "#ff8080";
+                // context.lineWidth=3;
+                // context.strokeRect(18.5, 0.5 + canvas.height - 51, canvas.width-37, 32);
+                // context.fillStyle = "#ff8080";
+                // context.fillRect(18.5, 0.5 + canvas.height - 51, loadpercentage*(canvas.width-37), 32);
                 
-                // Draw the progress text
-                var loadtext = "Loaded " + loadcount + "/" + loadtotal + " images";
-                context.fillStyle = "#000000";
-                context.font = "16px Verdana";
-                context.fillText(loadtext, 18, 0.5 + canvas.height - 63);
+                // // Draw the progress text
+                // var loadtext = "Loaded " + loadcount + "/" + loadtotal + " images";
+                // context.fillStyle = "#000000";
+                // context.font = "16px Verdana";
+                // context.fillText(loadtext, 18, 0.5 + canvas.height - 63);
                 
                 if (preloaded) {
                     // Add a delay for demonstration purposes
@@ -322,10 +322,10 @@ function loadShooter(){
                 animationstate = 1;
             }
             
-            if (animationstate == 1) {
+            if (animationstate === 1) {
                 // Pop bubbles
                 var tilesleft = false;
-                for (var i=0; i<cluster.length; i++) {
+                for (let i = 0; i<cluster.length; i++) {
                     var tile = cluster[i];
                     
                     if (tile.type >= 0) {
@@ -345,8 +345,8 @@ function loadShooter(){
                 }
                 
                 // Drop bubbles
-                for (var i=0; i<floatingclusters.length; i++) {
-                    for (var j=0; j<floatingclusters[i].length; j++) {
+                for (let i=0; i<floatingclusters.length; i++) {
+                    for (let j=0; j<floatingclusters[i].length; j++) {
                         var tile = floatingclusters[i][j];
                         
                         if (tile.type >= 0) {
@@ -379,7 +379,7 @@ function loadShooter(){
                     
                     // Check for game over
                     var tilefound = false
-                    for (var i=0; i<level.columns; i++) {
+                    for (let i=0; i<level.columns; i++) {
                         for (var j=0; j<level.rows; j++) {
                             if (level.tiles[i][j].type !== -1) {
                                 tilefound = true;
@@ -502,7 +502,7 @@ function loadShooter(){
             }
             
             // Add a new row of bubbles at the top
-            for (var i=0; i<level.columns; i++) {
+            for (let i=0; i<level.columns; i++) {
                 // Add random, existing, colors
                 level.tiles[i][0].type = getExistingColor();
             }
@@ -517,7 +517,7 @@ function loadShooter(){
             }
             
             // Check all tiles
-            for (var i=0; i<level.columns; i++) {
+            for (let i=0; i<level.columns; i++) {
                 for (var j=0; j<level.rows; j++) {
                     var tile = level.tiles[i][j];
                     if (tile.type >= 0) {
@@ -709,7 +709,7 @@ function loadShooter(){
             context.fillStyle = "#ffffff";
             context.font = "18px Verdana";
             var scorex = level.x + level.width - 150;
-            var scorey = level.y+level.height + level.tileheight - yoffset - 8;
+            var scorey = level.y +level.height + level.tileheight - yoffset - 8;
             drawCenterText("Score:", scorex, scorey, 150);
             context.font = "24px Verdana";
             drawCenterText(score, scorex, scorey+30, 150);
@@ -742,23 +742,7 @@ function loadShooter(){
         
         // Draw a frame around the game
         function drawFrame() {
-            // Draw background
-            context.fillStyle = "#e8eaec";
-            context.fillRect(0, 0, canvas.width, canvas.height);
-            
-            // Draw header
-            context.fillStyle = "#303030";
-            context.fillRect(0, 0, canvas.width, 79);
-            
-            // Draw title
-            context.fillStyle = "#ffffff";
-            context.font = "24px Verdana";
-            context.fillText("Bubble Shooter Example - Rembound.com", 10, 37);
-            
-            // Display fps
-            context.fillStyle = "#ffffff";
-            context.font = "12px Verdana";
-            context.fillText("Fps: " + fps, 13, 57);
+          
         }
         
         // Render tiles
@@ -902,7 +886,7 @@ function loadShooter(){
                         var newtile = randRange(0, bubblecolors-1);
                         
                         // Make sure the new tile is different from the previous tile
-                        if (newtile == randomtile) {
+                        if (newtile === randomtile) {
                             newtile = (newtile + 1) % bubblecolors;
                         }
                         randomtile = newtile;
@@ -1050,9 +1034,9 @@ function loadShooter(){
 const BubbleShooter = () => {
   return (
     <div className="BubbleShooter">
-        <canvas id="viewport" width="628" height="628"></canvas>
+        <canvas id="viewport" width="628" height="550"></canvas>
         {
-            loadShooter()
+            loadShooter(8, 14)
         }
     </div>
   );
