@@ -2,6 +2,7 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import BubbleShooter from "./components/BubbleShooter/BubbleShooter";
 import Memory from "./components/Memory";
 import Scenario from "./components/Scenario";
+import Navbar from "./components/NavBar/NavBar";
 
 export default function App() {
   return (
@@ -22,7 +23,7 @@ export default function App() {
 function Layout() {
   return (
     <div>
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -40,8 +41,10 @@ function Layout() {
             <Link to="/bubble">Bubble</Link>
           </li>
         </ul>
-      </nav>
+  </nav> */}
 
+      <Navbar />
+  
       <hr />
 
       <Outlet />
