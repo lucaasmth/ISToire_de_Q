@@ -4,6 +4,7 @@ import { animated, useTransition } from "react-spring";
 import "./styles.css";
 
 const Message = ({ message }) => {
+  console.log(message)
     const items = useMemo(
       () =>
         message.message.split("").map((letter, index) => ({
@@ -17,10 +18,15 @@ const Message = ({ message }) => {
       from: { display: "none" },
       enter: { display: "" }
     });
+    const perso = message.speaker === 'Paul' ? 'paul.png' :
+                  message.speaker === 'Julie' ? 'julie.png' :
+                  message.speaker === 'Intervenant' ? 'intervenant.png' :
+                  message.speaker === 'Amie' ? 'ami.png' :
+                  '';
     return (
         <div className="DialogMessage">
+          <img style={{maxHeight: '100px', display: 'block', margin: 'auto'}} src={process.env.PUBLIC_URL + '/images/' + perso} alt={message.speaker} />
         {transitions((styles, item, key) => { 
-            console.log(item);
           return (
             <animated.span key={key} style={styles} >
                 {item.item === "\n" 
