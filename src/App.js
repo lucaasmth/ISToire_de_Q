@@ -4,10 +4,13 @@ import Memory from "./components/Memory";
 import Crosswords from "./components/crosswords/Crosswords";
 import Scenario from "./components/Scenario";
 import Navbar from "./components/NavBar/NavBar";
+import AllBackground from "./components/AllBackground";
 
 export default function App() {
   return (
     <div className="App">
+      
+      <AllBackground>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<div>Home</div>} />
@@ -17,14 +20,16 @@ export default function App() {
           <Route path="bubble" element={<BubbleShooter />} />
         </Route>
       </Routes>
+      </AllBackground>
+
     </div>
   );
 }
 
 function Layout() {
   return (
-    <div>
-      {/* <nav>
+    <div style={{background: 'white'}}>
+      <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -42,7 +47,7 @@ function Layout() {
             <Link to="/bubble">Bubble</Link>
           </li>
         </ul>
-  </nav> */}
+      </nav>
 
       <Navbar />
   
