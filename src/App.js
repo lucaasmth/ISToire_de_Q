@@ -3,10 +3,12 @@ import BubbleShooter from "./components/BubbleShooter/BubbleShooter";
 import Memory from "./components/Memory";
 import Scenario from "./components/Scenario";
 import Navbar from "./components/NavBar/NavBar";
+import Background from "./components/Background";
 
 export default function App() {
   return (
     <div className="App">
+      <Background/>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<div>Home</div>} />
