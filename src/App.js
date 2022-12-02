@@ -1,14 +1,15 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import BubbleShooter from "./components/BubbleShooter/BubbleShooter";
 import Memory from "./components/Memory";
+import Scenario from "./components/Scenario";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<div>Home</div>} />
-          <Route path="scenario" element={<div>Scénario</div>} />
+          <Route path="scenario/:id" element={<Scenario />} />
           <Route path="memory" element={<Memory />} />
           <Route path="crosswords" element={<div>Crosswords</div>} />
           <Route path="bubble" element={<BubbleShooter />} />
@@ -48,4 +49,5 @@ function Layout() {
   );
 }
 
-export default App;
+
+
