@@ -190,6 +190,7 @@ export default function MyPage() {
                     numberColor: '#000000',
                     focusBackground: '#f0d0aa',
                     highlightBackground: '#fa7d98',
+                    
                   }}
                   >
                     <Crossword
