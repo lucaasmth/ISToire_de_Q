@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.NavBar{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavBar img:hover{
+    cursor: pointer;
+}
+
+
+

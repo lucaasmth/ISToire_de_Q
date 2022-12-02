@@ -1,10 +1,9 @@
-import BottomBar from "./components/NavigationBars/BottomBar";
-import AsideBar from "./components/NavigationBars/AsideBar";
+import Navbar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <div className="App">
-      <AsideBar></AsideBar>
+      <Navbar></Navbar>
     </div>
   );
 }
