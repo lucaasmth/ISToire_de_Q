@@ -1,6 +1,7 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import BubbleShooter from "./components/BubbleShooter/BubbleShooter";
 import Memory from "./components/Memory";
+import Crosswords from "./components/crosswords/Crosswords";
 import Scenario from "./components/Scenario";
 import Navbar from "./components/NavBar/NavBar";
 import AllBackground from "./components/AllBackground";
@@ -15,7 +16,7 @@ export default function App() {
           <Route index element={<div>Home</div>} />
           <Route path="scenario/:id" element={<Scenario />} />
           <Route path="memory" element={<Memory />} />
-          <Route path="crosswords" element={<div>Crosswords</div>} />
+          <Route path="crosswords" element={<Crosswords />} />
           <Route path="bubble" element={<BubbleShooter />} />
         </Route>
       </Routes>
