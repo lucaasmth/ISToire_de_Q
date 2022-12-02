@@ -42,16 +42,19 @@
     position: absolute;
     height: 70%;
     rotate: 82deg;
+    pointer-events: none;
 }
 .img2{
     top: 50%;
     left: 40%;
     position: absolute;
     height: 70%;
+    pointer-events: none;
 }
 .img3{
     rotate: 47deg;
     top: 5%;
+    pointer-events: none;
     left: 70%;
     position: absolute;
     height: 70%;
