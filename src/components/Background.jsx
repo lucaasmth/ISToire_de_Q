@@ -18,6 +18,7 @@ export default function Background(){
         await console.log(container);
     }, []);
 
+   
     
 
     return (
@@ -30,7 +31,7 @@ export default function Background(){
                 detectRetina: true,
                 fpsLimit: 60,
                 interactivity: {
-                  detectsOn: "canvas",
+                  detectsOn: "window",
                   events: {
                     onClick: {
                       enable: true,
@@ -46,8 +47,8 @@ export default function Background(){
                       mode: "bubble",
                       parallax: {
                         enable: false,
-                        force: 60,
-                        smooth: 10
+                        force: 100,
+                        smooth: 100
                       }
                     },
                     resize: true
