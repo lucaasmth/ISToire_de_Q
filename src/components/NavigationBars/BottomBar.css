@@ -1,4 +1,4 @@
-.bottomBar__left {
+.imContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,11 +7,3 @@
 img {
     max-width: 100%;
 }
-
-.im {
-    border: 1px solid red;
-}
-
-/* .im:active {
-    width: 200px;
-} */
