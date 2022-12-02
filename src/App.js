@@ -29,7 +29,7 @@ export default function App() {
 function Layout() {
   return (
     <div style={{background: 'white'}}>
-      <nav>
+      {/*<nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -47,7 +47,7 @@ function Layout() {
             <Link to="/bubble">Bubble</Link>
           </li>
         </ul>
-      </nav>
+  </nav>*/}
 
       <Navbar />
   
