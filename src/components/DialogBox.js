@@ -64,6 +64,9 @@ class DialogBox extends React.Component {
                 case "3":
                   this.navigate('/bubble');
                   break;
+                case "4":
+                  this.navigate('/credits');
+                  break;
                 default:
                   break;
               }

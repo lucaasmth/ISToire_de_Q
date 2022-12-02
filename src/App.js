@@ -4,6 +4,7 @@ import Memory from "./components/Memory";
 import Crosswords from "./components/crosswords/Crosswords";
 import Scenario from "./components/Scenario";
 import Navbar from "./components/NavBar/NavBar";
+import Credit from "./components/Credit/Credit";
 import AllBackground from "./components/AllBackground";
 
 export default function App() {
@@ -17,7 +18,9 @@ export default function App() {
           <Route path="scenario/:id" element={<Scenario />} />
           <Route path="memory" element={<Memory />} />
           <Route path="crosswords" element={<Crosswords />} />
-          <Route path="bubble" element={<BubbleShooter />} />
+          <Route path="bubble" element={<BubbleShooter />} />         
+          <Route path="credits" element={<Credit />} />
+
         </Route>
       </Routes>
       </AllBackground>
