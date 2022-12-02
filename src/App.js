@@ -4,6 +4,11 @@ import Lottie from 'react-lotties'
 import PropTypes from 'prop-types';
 import ParticleBackground from 'react-particle-backgrounds'
 import animationData from './lotties/127848-happy-spaceman.json';
+import styled from "styled-components";
+import { keyframes } from "styled-components";
+import ReactDOM from 'react-dom/client';
+import './CSS/App.css'
+
 
 export default function App() {
   const defaultOptions = {
@@ -16,12 +21,15 @@ export default function App() {
     };
   
   return (
-    <div>
-      <Lottie 
-	    options={defaultOptions}
-        height={400}
-        width={400}
-      />
-    </div>
+    <div className="test" >
+      <div>
+        <Lottie 
+        options={defaultOptions}
+          height={400}
+          width={400}
+        />
+      </div>
+      </div>
   );
+  
 }
