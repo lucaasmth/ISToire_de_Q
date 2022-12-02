@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import '../bgCss/Background.css'
 
 //dans les options de  particles, pleins d'images qui bougent dans tous les sens
 
@@ -20,6 +21,7 @@ export default function Background(){
     
 
     return (
+      <div className="test">
         <Particles
             id="tsparticles"
             init={particlesInit}
@@ -55,7 +57,7 @@ export default function Background(){
                       distance: 400,
                       duration: 2,
                       opacity: 1,
-                      size: 40,
+                      size: 80,
                       speed: 3
                     },
                     connect: {
@@ -125,8 +127,8 @@ export default function Background(){
                       enable: true,
                       area: 800
                     },
-                    limit: 0,
-                    value: 80
+                    limit: 100,
+                    value: 50
                   },
                   opacity: {
                     animation: {
@@ -196,7 +198,7 @@ export default function Background(){
                       sync: false
                     },
                     random: false,
-                    value: 16
+                    value: 40
                   }
                 },
                 polygon: {
@@ -214,5 +216,6 @@ export default function Background(){
                 }}
             }
         />
+      </div>
     );
 };
