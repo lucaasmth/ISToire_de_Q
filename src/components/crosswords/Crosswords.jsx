@@ -28,27 +28,34 @@ const data = {
             clue:'Mesures pour contrer des risques',
             answer:'PREVENTION',
             row: 14,
-            col: 6,
-          },
-          5: {
-            clue:'Couvre chef',
-            answer:'PRESERVATIF',
-            row: 16,
-            col: 13,
-          },
-          6: {
-            clue:'Virus très contagieux formant des cloques/plaies',
-            answer: 'HERPES',
-            row:18,
-            col: 13,
-          },
+            col: 6,},
+            5: {
+                clue:'Couvre chef',
+                answer:'PRESERVATIF',
+                row: 16,
+                col: 13,
+              },
+              6: {
+                clue:'Virus très contagieux formant des cloques/plaies',
+                answer: 'HERPES',
+                row:18,
+                col: 13,
+              },
+         
         },
         down: {
-          7: {
-            clue: 'Inflammation du foie',
-            answer: 'HEPATITE',
-            row: 7,
-            col: 8,
+            7: {
+                clue: 'Inflammation du foie',
+                answer: 'HEPATITE',
+                row: 7,
+                col: 8,
+              },
+         
+          11: {
+            clue: "Recherche d'une maladie",
+            answer: 'DEPISTAGE',
+            row: 13,
+            col: 22,
           },
           8: {
             clue: 'La rondelle',
@@ -67,12 +74,6 @@ const data = {
             answer: 'SYPHILIS',
             row: 16,
             col: 16,
-          },
-          11: {
-            clue: "Recherche d'une maladie",
-            answer: 'DEPISTAGE',
-            row: 13,
-            col: 22,
           },
         },
 };
