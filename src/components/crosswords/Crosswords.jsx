@@ -140,7 +140,7 @@ export default function MyPage() {
             setGagner(true);
             setNotFound(--NotFound);
         } 
-        else if (score == 1){
+        else if (score === 1){
             alert("Perdu !")
         } else {
             shakeOn();
