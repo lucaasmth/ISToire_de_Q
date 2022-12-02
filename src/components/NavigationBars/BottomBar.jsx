@@ -1,54 +1,41 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import "./BottomBar.css";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
-// function loadImages(imagefiles) {
-//     // Initialize variables
-//     loadcount = 0;
-//     loadtotal = imagefiles.length;
-//     preloaded = false;
-    
-//     // Load the images
-//     var loadedimages = [];
-//     for (var i=0; i<imagefiles.length; i++) {
-//         // Create the image object
-//         var image = new Image();
-        
-//         // Add onload event handler
-//         image.onload = function () {
-//             loadcount++;
-//             if (loadcount === loadtotal) {
-//                 // Done loading
-//                 preloaded = true;
-//             }
-//         };
-        
-//         // Set the source url of the image
-//         image.src = imagefiles[i];
-        
-//         // Save to the image array
-//         loadedimages[i] = image;
-//     }
-    
-//     // Return an array of images
-//     return loadedimages;
-// }
-
-function loadListe() {
-    return (<li><img src="./assets/bubble-sprites.png" width="100"></img></li>)
-}
+//on fait une popup avec reactjs-popup au milieu de l'écran lorsque l'on clique sur l'image
 
 const BottomBar = () => {
+
+    const ref = useRef();
+    const openTooltip = () => ref.current.open();
     return (
-      <div className="BottomBar">
-            <div className="Traitement">
-                <ul className="left-side">
-                    {loadListe()}
-                </ul>
-                <ul className="rigth-side">
-                    {loadListe()}
-                </ul>
+        <div className="bottomBar">
+            <div className="bottomBar__left">
+                <img src="./assets/chlamydia.jpg" alt="logo" className="bottomBar__logo" onClick={openTooltip} />
+                <Popup ref={ref} modal nested>
+                    {close => (
+                        <div className="modal">
+                            <button className="close" onClick={close} style={{position:'absolute',top:'0',right:'0'}}>
+                                &times;
+                            </button>
+
+                            <div className="header" style={{paddingTop:'20px'}}> Modal Title </div>
+                            <div className="content">
+                                {' '}
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, quos, voluptas? Quisquam
+                                quod, eos, ipsa, autem, nemo debitis ducimus repellendus voluptates asperiores nesciunt
+                                doloremque, expedita corporis, voluptate, voluptas, alias, minima.{' '}
+                            </div>
+                            <div className="actions">
+                               
+                               
+                            </div>
+                        </div>
+                    )}
+                </Popup>
             </div>
-      </div>
+        </div>
     );
 }
 export default BottomBar;
