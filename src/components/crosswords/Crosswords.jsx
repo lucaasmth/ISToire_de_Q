@@ -98,6 +98,7 @@ const Crosswords ={
 }
 
 const Score = {
+    fontSize: '23px',
     borderRadius: '5px',
     justifyContent: 'center',
     alignItems: 'center',
@@ -106,12 +107,33 @@ const Score = {
     backgroundColor: '#3ab9f0',
 }
 
+const Button = {
+    borderRadius: '20px',
+    width: '150px',
+    height: '50px',
+    cursor: 'pointer',
+    backgroundColor: '#3ab9f0',
+    color: 'white',
+    fontWeight: 'bold',
+    border: '0',
+    fontSize: '20px'
+}
+
+const ButtonsDiv = {
+    display: 'flex',
+    width: '600px', 
+    justifyContent: 'space-around',
+    alignItems: 'center',
+}
+
 export default function MyPage() {
     //deux bouttons qui permettent de checker la grille et de la reset en utilisant une ref pour le crossword
     const crosswordRef = React.useRef(null);
 
     const check = () => {
         if (crosswordRef.current.isCrosswordCorrect()) {
+            shakeOn();
+            setTimeout(() => { shakeOff() ; }, 50)
             setScore(++score);
             //alert('Correct!');
         } else {
@@ -167,9 +189,11 @@ export default function MyPage() {
                     />
                 </ThemeProvider>
             </div>
-            <button onClick={check}>Check</button>
-            <button onClick={reset}>Reset</button>
-            <button onClick={answers}>Fill all answers</button>
+            <div className='buttons' style={ButtonsDiv}>
+                <button style={Button} onClick={check}>Check</button>
+                <button style={Button} onClick={reset}>Reset</button>
+                <button style={Button} onClick={answers}>Fill all answers</button>
+            </div>
         </div>
     );
 }
