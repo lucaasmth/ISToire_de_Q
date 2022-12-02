@@ -1,4 +1,4 @@
-import './Card.css';
+import './MemoryCard.css';
 
 function Card(props) {
 
