@@ -147,83 +147,34 @@ export default function Background(){
                       weight: "400"
                     },
                     image: [
+                      
                       {
-                        src: "https://particles.js.org/images/fruits/apple.png",
+                        src: "./images-background/VIH.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: "https://particles.js.org/images/fruits/avocado.png",
+                        src: "./images-background/gonorhée.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: "https://particles.js.org/images/fruits/banana.png",
+                        src: "./images-background/HepatiteB.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: "https://particles.js.org/images/fruits/berries.png",
+                        src: "./images-background/HerpesGenital.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: "https://particles.js.org/images/fruits/cherry.png",
+                        src: "./images-background/HPV.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: "https://particles.js.org/images/fruits/grapes.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "../../public/images-bacground/1.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "https://particles.js.org/images/fruits/orange.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "https://particles.js.org/images/fruits/peach.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "https://particles.js.org/images/fruits/pear.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "https://particles.js.org/images/fruits/pepper.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "https://particles.js.org/images/fruits/plum.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "https://particles.js.org/images/fruits/star.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "https://particles.js.org/images/fruits/strawberry.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "https://particles.js.org/images/fruits/watermelon.png",
-                        width: 32,
-                        height: 32
-                      },
-                      {
-                        src: "https://particles.js.org/images/fruits/watermelon_slice.png",
+                        src: "./images-background/Syphilis.png",
                         width: 32,
                         height: 32
                       }
