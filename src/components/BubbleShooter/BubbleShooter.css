@@ -1,0 +1,22 @@
+.BubbleShooter{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    .SideBar{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .BottomBar{
+        display: none;
+    }
+}
+

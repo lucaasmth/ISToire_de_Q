@@ -1,4 +1,5 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import BubbleShooter from "./components/BubbleShooter/BubbleShooter";
 import Memory from "./components/Memory";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
           <Route path="scenario" element={<div>Scénario</div>} />
           <Route path="memory" element={<Memory />} />
           <Route path="crosswords" element={<div>Crosswords</div>} />
-          <Route path="bubble" element={<div>Bubble</div>} />
+          <Route path="bubble" element={<BubbleShooter />} />
         </Route>
       </Routes>
     </div>
