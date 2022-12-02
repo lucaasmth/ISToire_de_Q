@@ -183,7 +183,7 @@ export default function MyPage() {
 
                 <ThemeProvider
                  theme={{
-                    columnBreakpoint: '9999px',
+                    columnBreakpoint: '1px',
                     gridBackground: 'none',
                     cellBackground: '#ffe',
                     cellBorder: 'black',
