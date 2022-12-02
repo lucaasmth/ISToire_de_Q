@@ -5,11 +5,11 @@ import "./AsideBar.css";
 
 
 const AsideBar = () => {
-const descriptions = ["1",
-                    "22",
-                    "33",
-                    "44",
-                    "55 "];
+const descriptions = ["Cette maladie 1.. Ses traitements ... Ses protections... ",
+                    "Cette maladie 2.. Ses traitements ... Ses protections...",
+                    "Cette maladie 3.. Ses traitements ... Ses protections...",
+                    "Cette maladie 4.. Ses traitements ... Ses protections...",
+                    "Cette maladie 5.. Ses traitements ... Ses protections... "];
         function onOver(index){
             alert(descriptions[index]);
                     }

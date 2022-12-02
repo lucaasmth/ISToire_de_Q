@@ -12,18 +12,17 @@ const BottomBar = () => {
         "7"
     ];
 
-    function onOver(index){
+    function onclick(index){
         alert(descriptions[index]);
     }
     return (
         <div className='BottomBar'>
-            <div className='imContainer'>
-            <div className='im'><img alt='test' onClick={() => {onOver(0)}} src='./assets/chlamydia.jpg'></img></div>
-            <div className='im'><img onClick={() => {onOver(1)}} src='./assets/chlamydia.jpg'></img></div>
-            <div className='im'><img onClick={() => {onOver(2)}} src='./assets/chlamydia.jpg'></img></div>
-            <div className='im'><img onClick={() => {onOver(3)}} src='./assets/chlamydia.jpg'></img></div>
-            <div className='im'><img onClick={() => {onOver(4)}} src='./assets/chlamydia.jpg'></img></div>
-            <div className='im'><img onClick={() => {onOver(5)}} src='./assets/chlamydia.jpg'></img></div>
+            <div className='imContainerBottom'>
+            <div className='im'><img alt='test' onClick={()=>{onclick(0)}} src='./assets/chlamydia.jpg'></img></div>
+            <div className='im'><img onClick={()=>{onclick(1)}} src='./assets/hepatites.jpg'></img></div>
+            <div className='im'><img onClick={()=>{onclick(2)}} src='./assets/syphilis.jpg'></img></div>
+            <div className='im'><img onClick={()=>{onclick(3)}} src='./assets/chlamydia.jpg'></img></div>
+            <div className='im'><img onClick={()=>{onclick(4)}} src='./assets/chlamydia.jpg'></img></div>
             </div>
       </div>
     );

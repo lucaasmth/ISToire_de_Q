@@ -12,11 +12,17 @@
     .SideBar{
         display: none;
     }
+    .BottomBar{
+        display: visible;
+    }
 }
 
 @media screen and (min-width: 600px) {
     .BottomBar{
         display: none;
+    }
+    .SideBar{
+        display: visible;
     }
 }
 
