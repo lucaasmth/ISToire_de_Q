@@ -10,7 +10,7 @@ function App() {
 */
 
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import DialogBox from "./DialogBox";
 import "./styles.css";
@@ -83,11 +83,13 @@ function Scenario() {
     {speaker: speakers[0], message: "Ils vécurent heureux, n'eurent pas d'enfants ce soir là, et aucune IST."}
        ]
                 break;
+            default:
+                break;
         }
 
     return(
         <div className="App">
-            <DialogBox messages={messages} />
+            <DialogBox messages={messages} nextStep={id} navigate={useNavigate()} />
         </div>
     );
 }

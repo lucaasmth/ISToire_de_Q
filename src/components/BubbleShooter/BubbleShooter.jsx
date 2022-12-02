@@ -1,8 +1,8 @@
 import React from 'react';
-import BottomBar from '../NavigationBars/BottomBar';
+import { useNavigate } from 'react-router-dom';
 import './BubbleShooter.css'; 
 
-function loadShooter(Pcols, Prows){
+function loadShooter(Pcols, Prows, navigate){
     // The function gets called when the window is fully loaded
     window.onload = function() {
         // Get the canvas and context
@@ -738,6 +738,7 @@ function loadShooter(Pcols, Prows){
                 context.font = "24px Verdana";
                 drawCenterText("Game Over!", level.x, level.y + level.height / 2 + 10, level.width);
                 drawCenterText("Click to start", level.x, level.y + level.height / 2 + 40, level.width);
+                navigate("/scenario/4");
             }
         }
         
@@ -1033,12 +1034,13 @@ function loadShooter(Pcols, Prows){
 }
 
 const BubbleShooter = () => {
+    const navigate = useNavigate();
   return (
     <div className="BubbleShooter">
             
         <canvas id="viewport" width={348} height={550}></canvas>
         {
-            loadShooter(8, 14)
+            loadShooter(8, 14, navigate)
         }
     </div>
   );
