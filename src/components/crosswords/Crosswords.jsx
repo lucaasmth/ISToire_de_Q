@@ -149,7 +149,7 @@ export default function MyPage() {
             <div className={shake ? "score shake" : "score"} style={Score}><p>Score : {score}</p></div>
                 <ThemeProvider
                  theme={{
-                    columnBreakpoint: '9999px',
+                    columnBreakpoint: '1px',
                     gridBackground: 'none',
                     cellBackground: '#ffe',
                     cellBorder: '#fca',
