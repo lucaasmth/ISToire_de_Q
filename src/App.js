@@ -4,7 +4,7 @@ import AsideBar from "./components/NavigationBars/AsideBar";
 function App() {
   return (
     <div className="App">
-      <AsideBar></AsideBar>
+      <BottomBar></BottomBar>
     </div>
   );
 }
