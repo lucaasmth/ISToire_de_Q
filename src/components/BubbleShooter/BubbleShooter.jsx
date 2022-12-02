@@ -71,7 +71,7 @@ function loadShooter(Pcols, Prows){
                                 [[1, 0], [1, 1], [0, 1], [-1, 0], [0, -1], [1, -1]]];  // Odd row tiles
         
         // Number of different colors
-        var bubblecolors = 7;
+        var bubblecolors = 6;
         
         // Game states
         var gamestates = { init: 0, ready: 1, shootbubble: 2, removecluster: 3, gameover: 4 };
@@ -137,7 +137,7 @@ function loadShooter(Pcols, Prows){
         // Initialize the game
         function init() {
             // Load images
-            images = loadImages(["./assets/bubble-sprites.png"]);
+            images = loadImages(["./assets/all.png"]);
             bubbleimage = images[0];
         
             // Add mouse events
@@ -696,7 +696,7 @@ function loadShooter(Pcols, Prows){
             var yoffset =  level.tileheight/2;
             
             // Draw level background
-            context.fillStyle = "#8c8c8c";
+            context.fillStyle = "#ffffff";
             context.fillRect(level.x - 4, level.y - 4, level.width + 8, level.height + 4 - yoffset);
             
             // Render tiles
@@ -793,7 +793,7 @@ function loadShooter(Pcols, Prows){
             var centery = player.y + level.tileheight/2;
             
             // Draw player background circle
-            context.fillStyle = "#7a7a7a";
+            context.fillStyle = "#ffffff    ";
             context.beginPath();
             context.arc(centerx, centery, level.radius+12, 0, 2*Math.PI, false);
             context.fill();
@@ -853,7 +853,7 @@ function loadShooter(Pcols, Prows){
                 return;
             
             // Draw the bubble sprite
-            context.drawImage(bubbleimage, index * 40, 0, 40, 40, x, y, level.tilewidth, level.tileheight);
+            context.drawImage(bubbleimage, index * 530, 0, 530, 570, x, y, level.tilewidth, level.tileheight);
         }
         
         // Start a new game
@@ -1040,8 +1040,6 @@ const BubbleShooter = () => {
         {
             loadShooter(8, 14)
         }
-        
-        <BottomBar></BottomBar>
     </div>
   );
 }

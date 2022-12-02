@@ -1,31 +1,24 @@
 import React from 'react';
 import "./AsideBar.css";
 
-function createImage(){
-    
-}
 
 
-function loadImages(){
-    const ab = document.querySelector(".AsideBar");
-    for(var i=0;i<5;i++)
-    {
-        var div = new HTMLDivElement();
-        var img = new HTMLImageElement();
-        img.src = "./assets/bubble-sprites.png";
-        div.appendChild(img);
-        ab.append(img);
-    }
-
-}
-function loadDescription(){
-
-}
 
 const AsideBar = () => {
+
+    function onOver(e){
+        alert();
+    }
     return (
-      <div className="AsideBar">
-        {loadImages()}
+        <div className='AsideBar'>
+            <div className='imContainer'>
+            <div className='im'><img alt='test' onMouseOver={onOver} src='./assets/chlamydia.jpg'></img></div>
+            <div className='im'><img onMouseOver={onOver} src='./assets/chlamydia.jpg'></img></div>
+            <div className='im'><img onMouseOver={onOver} src='./assets/chlamydia.jpg'></img></div>
+            <div className='im'><img onMouseOver={onOver} src='./assets/chlamydia.jpg'></img></div>
+            <div className='im'><img onMouseOver={onOver} src='./assets/chlamydia.jpg'></img></div>
+            <div className='im'><img onMouseOver={onOver} src='./assets/chlamydia.jpg'></img></div>
+            </div>
       </div>
     );
 }
