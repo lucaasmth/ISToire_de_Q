@@ -2,6 +2,7 @@ import React from 'react';
 
 import Crossword, { ThemeProvider } from '@jaredreisinger/react-crossword';
 
+
 const data = {
     
         across: {
