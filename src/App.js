@@ -1,11 +1,14 @@
+import React from "react";
 
+import Scenario from "./Scenario";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <p> Salut</p>
+      <Scenario />
     </div>
   );
 }
 
-export default App;
+
+
