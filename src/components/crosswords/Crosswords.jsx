@@ -93,7 +93,7 @@ const Crosswords ={
     boxShadow: '0 0 5px 0 rgba(0,0,0,0.5)',
     padding: '10px',
     margin: '10px',
-    backgroundColor: '#3ab9f0',
+    width:'100%'
 }
 
 const Score = {
@@ -186,7 +186,7 @@ export default function MyPage() {
                     columnBreakpoint: '9999px',
                     gridBackground: 'none',
                     cellBackground: '#ffe',
-                    cellBorder: '#fca',
+                    cellBorder: 'black',
                     numberColor: '#000000',
                     focusBackground: '#f0d0aa',
                     highlightBackground: '#fa7d98',
