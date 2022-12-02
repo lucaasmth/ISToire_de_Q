@@ -1,10 +1,8 @@
-import BottomBar from "./components/NavigationBars/BottomBar";
-import AsideBar from "./components/NavigationBars/AsideBar";
-
+import BubbleShooter from "./components/BubbleShooter/BubbleShooter";
 function App() {
   return (
     <div className="App">
-      <AsideBar></AsideBar>
+      <BubbleShooter></BubbleShooter>
     </div>
   );
 }
