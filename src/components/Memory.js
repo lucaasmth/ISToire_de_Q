@@ -15,7 +15,6 @@ const Popup = props => {
   return (
     <div className="popup-box">
       <div className="box">
-        <span className="close-icon" onClick={props.handleClose}>x</span>
         {props.content}
       </div>
     </div>
@@ -100,6 +99,8 @@ function Memory() {
       setTurn(prevTurn => prevTurn + 1)
       setDisabled(false)
     }
+
+    
   
     useEffect(() => {
       if (choiceOne && choiceTwo) {
@@ -125,30 +126,29 @@ function Memory() {
     }, [choiceOne, choiceTwo]);
 
     return(
-        <div className='container'>
-            <button className='button' onClick={shuffleCards}>New Game</button>
-            
-            <div className="grid">
-                {cards.map(card => (
-                <Card
-                    key={card.id}
-                    card={card}
-                    handleChoice={handleChoice}
-                    flipped={card === choiceOne || card === choiceTwo || card.matched || startFlip}
-                    disabled={disabled}
-                    matched={card.matched}
-                />
-                ))}
-            </div>
-            {isOpen && <Popup
-                content={<>
-                <b>{modalTitle}</b>
-                <p className='p_pop'>{modalDesc}</p>
-                <button onClick={closePopup}>Ok</button>
-                </>}
-                handleClose={closePopup}
-            />}
-            <p className='p'>Turns: {turn}</p>
+      <div className='container'>
+      <h1>Memor'IST</h1>      
+      <div className="grid">
+        {cards.map(card => (
+          <Card
+            key={card.id}
+            card={card}
+            handleChoice={handleChoice}
+            flipped={card === choiceOne || card === choiceTwo || card.matched || startFlip}
+            disabled={disabled}
+            matched={card.matched}
+          />
+        ))}
+      </div>
+      {isOpen && <Popup
+        content={<>
+          <h2><b>{modalTitle}</b></h2>
+          <p className='p_pop'>{modalDesc}</p>
+          <button class="button" onClick={closePopup}>Ok</button>
+        </>}
+        handleClose={closePopup}
+      />}
+      <p className='p'>Turns: {turn}</p>
       </div>
     );
 }
