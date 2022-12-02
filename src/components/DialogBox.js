@@ -40,7 +40,9 @@ const Message = ({ message }) => {
 class DialogBox extends React.Component {
     constructor(props) {
         super(props);
+        this.navigate = props.navigate;
         this.messages = props.messages;
+        this.nextStep = props.nextStep;
         this.state = {
             currentMessage: 0
         };
@@ -50,7 +52,22 @@ class DialogBox extends React.Component {
         const handleClick = () => {
             if (this.state.currentMessage < this.messages.length - 1) {
                 this.setState({ currentMessage: this.state.currentMessage + 1 })
-            } else {}
+            } else {
+              switch(this.nextStep) {
+                case "1":
+                  //window.open("https://google.com");
+                  this.navigate('/memory');
+                  break;
+                case "2":
+                  this.navigate('/crosswords');
+                  break;
+                case "3":
+                  this.navigate('/bubble');
+                  break;
+                default:
+                  break;
+              }
+            }
         };
 
         return (

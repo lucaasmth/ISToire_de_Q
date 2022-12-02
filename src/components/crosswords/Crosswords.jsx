@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Crossword, { ThemeProvider } from '@jaredreisinger/react-crossword';
+import { useNavigate } from 'react-router-dom';
 import "./anim.css";
 //ffc8dd ffafcc bde0fe a2d2ff 
 const data = {
@@ -131,6 +132,7 @@ export default function MyPage() {
     const crosswordRef = React.useRef(null);
     let [gagner, setGagner] = useState(false);
     let [NotFound, setNotFound] = useState(11);
+    const navigate = useNavigate();
 
     const check = () => {
         if (crosswordRef.current.isCrosswordCorrect()) {
@@ -139,6 +141,7 @@ export default function MyPage() {
             setScore(++score);
             setGagner(true);
             setNotFound(--NotFound);
+            navigate("/scenario/3");
         } 
         else if (score === 1){
             alert("Perdu !")
