@@ -1,6 +1,7 @@
 .card {
     position: relative;
     cursor: pointer;
+    margin: auto;
     }
     
     .card .front{

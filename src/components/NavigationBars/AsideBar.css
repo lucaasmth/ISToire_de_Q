@@ -1,0 +1,17 @@
+.AsideBar{
+    display: flex;
+    justify-content: right;
+}
+.imContainer{
+    background-color: #2f2f2f;
+    padding: 20px;
+    flex-direction: column;
+    
+    border:1px solid blue;
+}
+img{
+    margin-top: 10%;
+    width: 150px;
+    border: 2px solid red;
+}
+

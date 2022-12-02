@@ -1,17 +1,20 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import BubbleShooter from "./components/BubbleShooter/BubbleShooter";
 import Memory from "./components/Memory";
 import Crosswords from "./components/crosswords/Crosswords";
+import Scenario from "./components/Scenario";
+import Navbar from "./components/NavBar/NavBar";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<div>Home</div>} />
-          <Route path="scenario" element={<div>Scénario</div>} />
+          <Route path="scenario/:id" element={<Scenario />} />
           <Route path="memory" element={<Memory />} />
           <Route path="crosswords" element={<Crosswords />} />
-          <Route path="bubble" element={<div>Bubble</div>} />
+          <Route path="bubble" element={<BubbleShooter />} />
         </Route>
       </Routes>
     </div>
@@ -21,7 +24,7 @@ function App() {
 function Layout() {
   return (
     <div>
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -39,8 +42,10 @@ function Layout() {
             <Link to="/bubble">Bubble</Link>
           </li>
         </ul>
-      </nav>
+  </nav> */}
 
+      <Navbar />
+  
       <hr />
 
       <Outlet />
@@ -48,4 +53,5 @@ function Layout() {
   );
 }
 
-export default App;
+
+
