@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Crossword, { ThemeProvider } from '@jaredreisinger/react-crossword';
 import "./anim.css";
-
+//ffc8dd ffafcc bde0fe a2d2ff 
 const data = {
     
         across: {
@@ -83,7 +83,6 @@ const container={
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    color: 'white',
     fontSize: '20px',
     fontWeight: 'bold',
     fontFamily: 'Arial',
@@ -98,6 +97,7 @@ const Crosswords ={
 }
 
 const Score = {
+    fontSize: '23px',
     borderRadius: '5px',
     justifyContent: 'center',
     alignItems: 'center',
@@ -106,21 +106,46 @@ const Score = {
     backgroundColor: '#3ab9f0',
 }
 
+const Button = {
+    borderRadius: '20px',
+    width: '150px',
+    height: '50px',
+    cursor: 'pointer',
+    backgroundColor: '#3ab9f0',
+    color: 'white',
+    fontWeight: 'bold',
+    border: '0',
+    fontSize: '20px'
+    
+    
+}
+
+const ButtonsDiv = {
+    display: 'flex',
+    width: '600px', 
+    justifyContent: 'space-around',
+    alignItems: 'center',
+}
+
 export default function MyPage() {
-    //deux bouttons qui permettent de checker la grille et de la reset en utilisant une ref pour le crossword
     const crosswordRef = React.useRef(null);
+    let [gagner, setGagner] = useState(false);
+    
 
     const check = () => {
         if (crosswordRef.current.isCrosswordCorrect()) {
+            shakeOn();
+            setTimeout(() => { shakeOff() ; }, 50)
             setScore(++score);
-            //alert('Correct!');
+            setGagner(true);
         } else {
             shakeOn();
             setTimeout(() => { shakeOff() ; }, 500)
             setScore(--score);
-            //alert('Incorrect!');
+            setGagner(false);
         }
     };
+
 
     const reset = () => {
         setScore(0);
@@ -131,7 +156,7 @@ export default function MyPage() {
         crosswordRef.current.fillAllAnswers();
     }
 
-    let [score, setScore] = useState(0);
+    let [score, setScore] = useState(10);
     
     const [shake, shakeActive] = React.useState(false);
 
@@ -147,29 +172,45 @@ export default function MyPage() {
         <div style={container}>
             <div style={Crosswords}>
             <div className={shake ? "score shake" : "score"} style={Score}><p>Score : {score}</p></div>
+            {gagner ? 
+                <div>
+                <p>Bravo vous avez trouvés tous les mots, vous pouvez passer à la suite !</p>
+                <button style={Button}>Suite</button>
+                </div>
+             : 
+                <p>Perdu !</p>}
+
+
                 <ThemeProvider
                  theme={{
                     columnBreakpoint: '1px',
                     gridBackground: 'none',
                     cellBackground: '#ffe',
                     cellBorder: '#fca',
-                    textColor: '#000',
                     numberColor: '#000000',
                     focusBackground: '#f0d0aa',
                     highlightBackground: '#fa7d98',
-                  }}>
+                  }}
+                  >
                     <Crossword
                         data={data}
                         ref={crosswordRef}
                         showClues={true}
                         showNumbers={true}
                         showSolution={false}
+                        acrossLabel="Horizontal"
+                        downLabel="Vertical"
+                        
                     />
                 </ThemeProvider>
             </div>
-            <button onClick={check}>Check</button>
-            <button onClick={reset}>Reset</button>
-            <button onClick={answers}>Fill all answers</button>
+            <div style={ButtonsDiv}>
+                <button style={Button} onClick={check}>Check</button>
+                <button style={Button} onClick={reset}>Reset</button>
+                <button style={Button} onClick={answers}>En galère, retourner au mémory</button>
+            </div>
+
+            
         </div>
     );
 }
