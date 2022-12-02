@@ -126,8 +126,7 @@ function App() {
 
   return (
     <div className='container'>
-      <button className='button' onClick={shuffleCards}>New Game</button>
-      
+      <h1>Memor'IST</h1>      
       <div className="grid">
         {cards.map(card => (
           <Card
@@ -142,9 +141,9 @@ function App() {
       </div>
       {isOpen && <Popup
         content={<>
-          <b>{modalTitle}</b>
+          <h2><b>{modalTitle}</b></h2>
           <p className='p_pop'>{modalDesc}</p>
-          <button onClick={closePopup}>Ok</button>
+          <button class="button" onClick={closePopup}>Ok</button>
         </>}
         handleClose={closePopup}
       />}
