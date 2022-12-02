@@ -55,7 +55,7 @@ class DialogBox extends React.Component {
 
         return (
             <div className="DialogBox">
-                <div className="dialogTitle" dangerouslySetInnerHTML={ {__html: this.messages[this.state.currentMessage].speaker.replace("\n", "<br>") } }></div>
+                <div className="dialogTitle"></div>
                 <Message message={this.messages[this.state.currentMessage]} key={this.state.currentMessage} />
                 <div onClick={handleClick} className="dialogFooter">
                     Next
