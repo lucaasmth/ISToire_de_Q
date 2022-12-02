@@ -1,4 +1,5 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import Memory from "./components/Memory";
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<div>Home</div>} />
           <Route path="scenario" element={<div>Scénario</div>} />
-          <Route path="memory" element={<div>Memory</div>} />
+          <Route path="memory" element={<Memory />} />
           <Route path="crosswords" element={<div>Crosswords</div>} />
           <Route path="bubble" element={<div>Bubble</div>} />
         </Route>
