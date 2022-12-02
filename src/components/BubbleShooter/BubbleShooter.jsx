@@ -1040,8 +1040,6 @@ const BubbleShooter = () => {
         {
             loadShooter(8, 14)
         }
-        
-        <BottomBar></BottomBar>
     </div>
   );
 }

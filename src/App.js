@@ -1,5 +1,6 @@
-import BottomBar from "./components/NavigationBars/BottomBar";
-import AsideBar from "./components/NavigationBars/AsideBar";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
+import BubbleShooter from "./components/BubbleShooter/BubbleShooter";
+import Memory from "./components/Memory";
 
 function App() {
   return (
