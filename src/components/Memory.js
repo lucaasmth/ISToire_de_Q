@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Memory.css';
 import Card from './MemoryCard.js'
 
@@ -32,6 +33,9 @@ function Memory() {
     const [modalDesc, setModalDesc] = useState("");
   
     const [isOpen, setIsOpen] = useState(false);
+    const [won, setWon] = useState(false);
+
+    const navigate = useNavigate();
   
     const togglePopup = (object) => {
       setIsOpen(true);
@@ -41,12 +45,16 @@ function Memory() {
   
     const closePopup = () => {
       setIsOpen(false);
+      console.log(won);
+      if(won) {
+        navigate("/scenario/2");
+      }
       checkWin().then((result) => {
         if(result) {
-          console.log("win");
           setIsOpen(true);
           setModalTitle("Win");
           setModalDesc("Vous avez gagné ! LIEN");
+          setWon(true);
         }
       })
     }
@@ -59,10 +67,8 @@ function Memory() {
     }, []);
   
     async function checkWin(){
-      console.log("test");
       let win = true;
       await cards.forEach(card => {
-        console.log(card.matched);
         if(!card.matched) win = false;
       });
       return win;
