@@ -1,0 +1,36 @@
+/* CSS HEX */
+:root{  
+    --pink-lavender: #cdb4dbff;
+    --orchid-pink: #ffc8ddff;
+    --nadeshiko-pink: #ffafccff;
+    --uranian-blue: #bde0feff;
+    --baby-blue-eyes: #a2d2ffff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.Home{
+    background-color: var(--uranian-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn-jouer {
+    text-decoration: none;
+    font-size: 35px;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: var(--nadeshiko-pink);
+    transition-duration: .3s;
+}
+
+.btn-jouer:hover{
+    background-color: var(--baby-blue-eyes);
+    transition-duration: .3s;
+}
