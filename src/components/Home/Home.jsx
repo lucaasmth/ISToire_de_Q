@@ -27,7 +27,7 @@ const Home = () => {
         <img className='img1' src="./images/condom-svgrepo-com.svg" alt="" srcset=""/>
         <img className='img2' src="./images/condom-svgrepo-com.svg" alt="" srcset=""/>
         <img className='img3' src="./images/condom-svgrepo-com.svg" alt="" srcset=""/>
-        <a href="" className='btn-jouer'>JOUER</a>
+        <a href="/scenario/1" className='btn-jouer'>JOUER</a>
         {loadCondoms()}
       </div>
     );
