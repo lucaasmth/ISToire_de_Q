@@ -90,10 +90,10 @@ const container={
 
 const Crosswords ={
     borderRadius: '5px',
-    boxShadow: '0 0 5px 0 rgba(0,0,0,0.5)',
+    //boxShadow: '0 0 5px 0 rgba(0,0,0,0.5)',
     padding: '10px',
     margin: '10px',
-    width:'100%'
+    width:'50%'
 }
 
 const Score = {
@@ -130,7 +130,7 @@ const ButtonsDiv = {
 export default function MyPage() {
     const crosswordRef = React.useRef(null);
     let [gagner, setGagner] = useState(false);
-    
+    let [NotFound, setNotFound] = useState(11);
 
     const check = () => {
         if (crosswordRef.current.isCrosswordCorrect()) {
@@ -138,6 +138,10 @@ export default function MyPage() {
             setTimeout(() => { shakeOff() ; }, 50)
             setScore(++score);
             setGagner(true);
+            setNotFound(--NotFound);
+        } 
+        else if (score == 1){
+            alert("Perdu !")
         } else {
             shakeOn();
             setTimeout(() => { shakeOff() ; }, 500)
@@ -176,9 +180,7 @@ export default function MyPage() {
                 <div>
                 <p>Bravo vous avez trouvés tous les mots, vous pouvez passer à la suite !</p>
                 <button style={Button}>Suite</button>
-                </div>
-             : 
-                <p>Perdu !</p>}
+                </div> : ""}
 
 
                 <ThemeProvider
@@ -206,9 +208,9 @@ export default function MyPage() {
                 </ThemeProvider>
             </div>
             <div style={ButtonsDiv}>
-                <button style={Button} onClick={check}>Check</button>
-                <button style={Button} onClick={reset}>Reset</button>
-                <button style={Button} onClick={answers}>En galère, retourner au mémory</button>
+                <button className="btn"style={Button} onClick={check} >Check</button>
+                <button className="btn"style={Button} onClick={reset}>Reset</button>
+                <button className="btn"style={Button} onClick={answers}>Réponses</button>
             </div>
 
             

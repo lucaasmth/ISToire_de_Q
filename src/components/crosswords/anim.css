@@ -1,3 +1,9 @@
+
+.btn:hover{
+    box-shadow: 10px 10px #bde0feff;
+    transition-duration: .3s;
+}
+
 .shake {
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shakeKeyFrame 0.5s;
@@ -23,4 +29,8 @@
 .grid {
     height: initial;
     display: block;
+}
+.btn{
+    transition-duration: .3s;
+    margin-bottom: 20px;
 }
