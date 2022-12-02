@@ -6,6 +6,7 @@ import Scenario from "./components/Scenario";
 import Navbar from "./components/NavBar/NavBar";
 import Credit from "./components/Credit/Credit";
 import AllBackground from "./components/AllBackground";
+import Home from "./components/Home/Home";
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
       <AllBackground>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<div>Home</div>} />
+          <Route index element={<Home />} />
           <Route path="scenario/:id" element={<Scenario />} />
           <Route path="memory" element={<Memory />} />
           <Route path="crosswords" element={<Crosswords />} />
