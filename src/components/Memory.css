@@ -33,7 +33,7 @@
     height: 4rem;
 }
 
-.grid {
+.memory__grid {
     height: 600px;
     width: 600px;
     margin-top: 40px;
@@ -42,7 +42,7 @@
     grid-gap: 1em;
 }
 
-.grid div img {
+.memory__grid div img {
     width: 80%;
 }
 
