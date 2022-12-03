@@ -21,7 +21,7 @@ const Message = ({ message }) => {
     const perso = message.speaker === 'Paul' ? 'paul.png' :
                   message.speaker === 'Julie' ? 'julie.png' :
                   message.speaker === 'Intervenant' ? 'intervenant.png' :
-                  message.speaker === 'Amie' ? 'ami.png' :
+                  message.speaker === 'Amie' ? 'amie.png' :
                   '';
     return (
         <div className="DialogMessage">
