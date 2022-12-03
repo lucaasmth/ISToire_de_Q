@@ -152,32 +152,32 @@ export default function Background(){
                     image: [
                       
                       {
-                        src: process.env.PUBLIC_URL + "./images-background/VIH.png",
+                        src: process.env.PUBLIC_URL + "/images-background/VIH.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: process.env.PUBLIC_URL + "./images-background/gonorhée.png",
+                        src: process.env.PUBLIC_URL + "/images-background/gonorhée.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: process.env.PUBLIC_URL + "./images-background/HepatiteB.png",
+                        src: process.env.PUBLIC_URL + "/images-background/HepatiteB.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: process.env.PUBLIC_URL + "./images-background/HerpesGenital.png",
+                        src: process.env.PUBLIC_URL + "/images-background/HerpesGenital.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: process.env.PUBLIC_URL + "./images-background/HPV.png",
+                        src: process.env.PUBLIC_URL + "/images-background/HPV.png",
                         width: 32,
                         height: 32
                       },
                       {
-                        src: process.env.PUBLIC_URL + "./images-background/Syphilis.png",
+                        src: process.env.PUBLIC_URL + "/images-background/Syphilis.png",
                         width: 32,
                         height: 32
                       }
