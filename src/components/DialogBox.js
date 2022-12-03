@@ -81,7 +81,7 @@ class DialogBox extends React.Component {
 
         return (
             <div className="DialogBox">
-                <div className="dialogTitle">{this.messages[this.state.currentMessage].speaker}</div>
+                {/*<div className="dialogTitle">{this.messages[this.state.currentMessage].speaker}</div>*/}
                 <Message message={this.messages[this.state.currentMessage]} key={this.state.currentMessage} />
                 <div onClick={handleClick} className="dialogFooter">
                     Next
