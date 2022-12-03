@@ -1,17 +1,14 @@
 import './Navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-
-    function toHome(){
-        /* Aller au home */
-    }
-
-    return (
-      <div className="NavBar">
-            <img src="./assets/sn1.jpg" alt="" srcset="" width="100" onClick={toHome}/>
-            
-      </div>
-    );
-  }
+  const navigate = useNavigate();
   
-  export default Navbar;
+  return (
+    <div className="NavBar">
+      <img src="/assets/sn1.jpg" alt="" srcset="" width="100" onClick={() => { navigate("/") }}/>
+    </div>
+  );
+}
+  
+export default Navbar;

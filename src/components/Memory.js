@@ -133,28 +133,28 @@ function Memory() {
 
     return(
       <div className='container'>
-      <h1>Memor'IST</h1>      
-      <div className="grid">
-        {cards.map(card => (
-          <Card
-            key={card.id}
-            card={card}
-            handleChoice={handleChoice}
-            flipped={card === choiceOne || card === choiceTwo || card.matched || startFlip}
-            disabled={disabled}
-            matched={card.matched}
-          />
-        ))}
-      </div>
-      {isOpen && <Popup
-        content={<>
-          <h2><b>{modalTitle}</b></h2>
-          <p className='p_pop'>{modalDesc}</p>
-          <button class="button" onClick={closePopup}>Ok</button>
-        </>}
-        handleClose={closePopup}
-      />}
-      <p className='p'>Turns: {turn}</p>
+        <h1>Memor'IST</h1>
+        <div className="memory__grid">
+          {cards.map(card => (
+            <Card
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card === choiceOne || card === choiceTwo || card.matched || startFlip}
+              disabled={disabled}
+              matched={card.matched}
+            />
+          ))}
+        </div>
+        {isOpen && <Popup
+          content={<>
+            <h2><b>{modalTitle}</b></h2>
+            <p className='p_pop'>{modalDesc}</p>
+            <button class="button" onClick={closePopup}>Ok</button>
+          </>}
+          handleClose={closePopup}
+        />}
+        <p className='p'>Turns: {turn}</p>
       </div>
     );
 }

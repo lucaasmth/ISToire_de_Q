@@ -143,7 +143,7 @@ export default function MyPage() {
             setNotFound(--NotFound);
             navigate("/scenario/3");
         } 
-        else if (score == 1){
+        else if (score === 1){
             alert("Perdu !")
         } else {
             shakeOn();

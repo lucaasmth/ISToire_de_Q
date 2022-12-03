@@ -70,6 +70,9 @@ class DialogBox extends React.Component {
                 case "3":
                   this.navigate('/bubble');
                   break;
+                case "4":
+                  this.navigate('/credits');
+                  break;
                 default:
                   break;
               }
@@ -78,7 +81,7 @@ class DialogBox extends React.Component {
 
         return (
             <div className="DialogBox">
-                <div className="dialogTitle"></div>
+                <div className="dialogTitle">{this.messages[this.state.currentMessage].speaker}</div>
                 <Message message={this.messages[this.state.currentMessage]} key={this.state.currentMessage} />
                 <div onClick={handleClick} className="dialogFooter">
                     Next
