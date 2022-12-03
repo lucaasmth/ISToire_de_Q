@@ -20,7 +20,6 @@ const Message = ({ message }) => {
     return (
         <div className="DialogMessage">
         {transitions((styles, item, key) => { 
-            console.log(item);
           return (
             <animated.span key={key} style={styles} >
                 {item.item === "\n" 
@@ -75,7 +74,7 @@ class DialogBox extends React.Component {
 
         return (
             <div className="DialogBox">
-                <div className="dialogTitle"></div>
+                <div className="dialogTitle">{this.messages[this.state.currentMessage].speaker}</div>
                 <Message message={this.messages[this.state.currentMessage]} key={this.state.currentMessage} />
                 <div onClick={handleClick} className="dialogFooter">
                     Next
