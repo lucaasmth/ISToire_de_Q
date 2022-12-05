@@ -7,7 +7,7 @@
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 
